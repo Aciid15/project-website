@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   {{-- x-cloak biar dropdown tidak kedip --}}
-  <style>[x-cloak]{display:none!important}</style>
+  <style>
+  [x-cloak]{display:none!important}
+  
+  .line-clamp-2{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+
+  </style>
 
   @stack('styles')
 </head>
@@ -40,5 +50,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   @stack('scripts')
+  
 </body>
 </html>

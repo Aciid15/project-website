@@ -5,7 +5,8 @@
 @section('content')
   @include('partials.hero-slider')
   @include('partials.section-pimpinan')
-   @include('partials.section-statistik')
+  @include('partials.section-statistik')
+  @include('partials.section-berita')
 
   <div class="mx-auto max-w-7xl px-4 py-6">
     <!-- content -->
@@ -41,6 +42,31 @@
     }, { threshold: 0.15 });
 
     els.forEach(el => io.observe(el));
+  });
+
+   document.addEventListener("DOMContentLoaded", () => {
+    new Swiper(".beritaSwiper", {
+      loop: true,
+      speed: 700, // kecepatan transisi slide (ms)
+
+      autoplay: {
+        delay: 3000,              // jeda tiap pindah slide (ms)
+        disableOnInteraction: false, // tetap jalan walau user swipe/klik
+        pauseOnMouseEnter: true,  // pause saat hover (opsional)
+      },
+
+      spaceBetween: 16,
+      slidesPerView: 1.15,
+      breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 18 },
+        1024: { slidesPerView: 4, spaceBetween: 22 },
+      },
+
+      navigation: {
+        nextEl: ".berita-next",
+        prevEl: ".berita-prev",
+      },
+    });
   });
 </script>
 @endpush
