@@ -5,6 +5,7 @@
 @section('content')
   @include('partials.hero-slider')
   @include('partials.section-pimpinan')
+   @include('partials.section-statistik')
 
   <div class="mx-auto max-w-7xl px-4 py-6">
     <!-- content -->
