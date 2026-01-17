@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full bg-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>@yield('title', 'GTK')</title>
+
+  {{-- Tailwind CDN (sementara) --}}
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  {{-- Alpine --}}
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  {{-- Swiper CSS --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  {{-- x-cloak biar dropdown tidak kedip --}}
+  <style>[x-cloak]{display:none!important}</style>
+
+  @stack('styles')
+</head>
+
+<body class="h-full">
+  <div class="min-h-full">
+
+    {{-- Navbar --}}
+    @include('partials.navbar')
+
+    {{-- Konten halaman --}}
+    <main>
+      @yield('content')
+    </main>
+
+  </div>
+
+  {{-- Tailwind Plus Elements (kalau kamu memang pakai el-dropdown / el-disclosure) --}}
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+  {{-- Swiper JS --}}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  @stack('scripts')
+</body>
+</html>
