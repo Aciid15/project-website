@@ -1,16 +1,16 @@
-<section class="bg-sky-500">
+<section class="bg-sky-500 js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
 
     {{-- Atas: teks kiri + foto kanan --}}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
       {{-- Kiri --}}
       <div class="text-white">
-        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+        <h2 class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 text-3xl sm:text-4xl font-extrabold leading-tight">
           Dr. Hos Arie Rhamadhan<br class="hidden sm:block"/>
           Sibarani, S.H. M.H.
         </h2>
 
-        <p class="mt-6 max-w-xl text-white/90 leading-relaxed text-sm sm:text-base">
+        <p class=" js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 mt-6 max-w-xl text-white/90 leading-relaxed text-sm sm:text-base">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
           a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -20,7 +20,7 @@
 
       {{-- Kanan --}}
       <div class="lg:flex lg:justify-end">
-        <div class="w-full max-w-sm sm:max-sm-lg bg-white rounded-2xl shadow-xl">
+        <div class=" js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 w-full max-w-sm sm:max-sm-lg bg-white rounded-2xl shadow-xl">
           <div class="aspect-square rounded-xl bg-gray-50 overflow-hidden flex items-center justify-center">
             {{-- GANTI src sesuai file kamu --}}
             <img class="h-full w-full object-cover"
@@ -35,12 +35,12 @@
     </div>
 
     {{-- Bawah: 4 tombol --}}
-    <div class="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {{-- Button 1 --}}
       <a href="#"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
-          hover:bg-sky-400 hover:shadow-lg hover:scale-[1.02]
+          hover:shadow-lg hover:scale-[1.02]
           hover:ring-2 hover:ring-white/60 hover:ring-offset-2 hover:ring-offset-sky-400 hover:bg-gradient-to-r hover:from-sky-400 hover:to-sky-600">
         <span class="h-12 w-12 rounded-xl bg-amber-50 flex items-center justify-center">
           {{-- icon: gedung --}}
@@ -57,7 +57,7 @@
       <a href="#"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
-          hover:bg-sky-400 hover:shadow-lg hover:scale-[1.02]
+          hover:shadow-lg hover:scale-[1.02]
           hover:ring-2 hover:ring-white/60 hover:ring-offset-2 hover:ring-offset-sky-400 hover:bg-gradient-to-r hover:from-sky-400 hover:to-sky-600">
         <span class="h-12 w-12 rounded-xl bg-amber-50 flex items-center justify-center">
           {{-- icon: dokumen --}}
@@ -75,7 +75,7 @@
       <a href="#"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
-          hover:bg-sky-400 hover:shadow-lg hover:scale-[1.02]
+          hover:shadow-lg hover:scale-[1.02]
           hover:ring-2 hover:ring-white/60 hover:ring-offset-2 hover:ring-offset-sky-400 hover:bg-gradient-to-r hover:from-sky-400 hover:to-sky-600">
         <span class="h-12 w-12 rounded-xl bg-amber-50 flex items-center justify-center">
           {{-- icon: tas --}}
@@ -93,7 +93,7 @@
       <a href="#"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
-          hover:bg-sky-400 hover:shadow-lg hover:scale-[1.02]
+          hover:shadow-lg hover:scale-[1.02]
           hover:ring-2 hover:ring-white/60 hover:ring-offset-2 hover:ring-offset-sky-400 hover:bg-gradient-to-r hover:from-sky-400 hover:to-sky-600">
         <span class="h-12 w-12 rounded-xl bg-amber-50 flex items-center justify-center">
           {{-- icon: struktur --}}

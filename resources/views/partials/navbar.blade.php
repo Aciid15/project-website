@@ -45,14 +45,14 @@
                     x-transition:leave-end="transform opacity-0 translate-y-1"
                     class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
                   
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Sejarah</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Visi & Misi</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Struktur Organisasi</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Tugas & Fungsi</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Profil Pimpinan</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Bidang & UPT</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Kontak</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Lokasi</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Sejarah</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Visi & Misi</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Struktur Organisasi</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Tugas & Fungsi</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Profil Pimpinan</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Bidang & UPT</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Kontak</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Lokasi</a>
                 </div>
               </div>
 
@@ -84,11 +84,11 @@
                     x-transition:leave-start="transform opacity-100 translate-y-0"
                     x-transition:leave-end="transform opacity-0 translate-y-1"
                      class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Berita</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Artikel</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Galeri Foto</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Galeri Video</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Pengumuman</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Berita</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Artikel</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Galeri Foto</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Galeri Video</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pengumuman</a>
                 </div>
               </div>
 
@@ -115,13 +115,13 @@
                     x-transition:leave-start="transform opacity-100 translate-y-0"
                     x-transition:leave-end="transform opacity-0 translate-y-1"
                      class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100" >Profil PPID</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Informasi Berkala</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Informasi Serta Merta</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Informasi Setiap Saat</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Permohonan Informasi</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">Laporan PPID</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-gray-100">SOP & Maklumat</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300" >Profil PPID</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Berkala</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Serta Merta</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Setiap Saat</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Permohonan Informasi</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Laporan PPID</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">SOP & Maklumat</a>
                 </div>
               </div>
 
