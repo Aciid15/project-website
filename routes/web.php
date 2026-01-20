@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Banner;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\BannerController;
 
 // Route home
 Route::get('/', function () {
-    return view('home');
+    $banners = Banner::active()->ordered()->get();
+    return view('home', compact('banners'));
 })->name('home');
 
 
@@ -20,6 +23,20 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+// Banner Routes
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::resource('banners', BannerController::class);
+        Route::post('banners/{banner}/toggle', [BannerController::class, 'toggleStatus'])
+            ->name('banners.toggle');
+    });    
+
+// routes/web.php
+
+Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
+    Route::resource('banners', BannerController::class);
+    Route::post('banners/{banner}/toggle', [BannerController::class, 'toggle'])->name('banners.toggle');
+});    
     
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
