@@ -9,8 +9,8 @@
         <span class="h-[3px] w-20 bg-amber-400 rounded-full mt-2"></span>
       </div>
 
-      <a href="#"
-         class=" mt-6 inline-flex items-center rounded-full border border-sky-500 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-900
+      <a href="{{ route('news.index') }}"
+         class="mt-6 inline-flex items-center rounded-full border border-sky-500 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-900
                 hover:bg-sky-200 transition">
         Lihat Semua Berita
       </a>
@@ -21,162 +21,64 @@
       <div class="swiper beritaSwiper">
         <div class="swiper-wrapper">
 
-          {{-- Slide 1 --}}
+          @forelse($news as $item)
+            {{-- Slide Berita --}}
             <div class="swiper-slide">
-            <a href="#" class="block w-full max-w-[240px] mx-auto h-full">
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
-                
-                {{-- gambar fixed --}}
-                <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src="{{ asset('images/berita1.png') }}"
-                        alt="Berita 1"
-                        class="w-full h-full object-cover"
-                        onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=Berita+1';">
-                </div>
+              <a href="{{ route('news.show', $item->id) }}" class="block w-full max-w-[240px] mx-auto h-full">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
+                  
+                  {{-- Gambar --}}
+                  <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
+                    @if($item->image)
+                      <img src="{{ asset('storage/' . $item->image) }}"
+                           alt="{{ $item->title }}"
+                           class="w-full h-full object-cover"
+                           onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=No+Image';">
+                    @else
+                      <img src="https://dummyimage.com/800x500/e5e7eb/111827&text=No+Image"
+                           alt="No Image"
+                           class="w-full h-full object-cover">
+                    @endif
+                  </div>
 
-                {{-- isi dibuat flex-1 supaya rapi --}}
-                <div class="p-3 flex-1">
+                  {{-- Konten --}}
+                  <div class="p-3 flex-1">
                     <div class="text-[11px] text-gray-500 flex items-center gap-2">
-                    <span>📅</span>
-                    <span>14 Januari 2025</span>
+                      <span>📅</span>
+                      <span>{{ $item->created_at->format('d F Y') }}</span>
                     </div>
 
-                    {{-- judul dibatasi baris --}}
+                    {{-- Judul dibatasi 2 baris --}}
                     <h3 class="mt-1 text-xs font-extrabold text-gray-900 leading-snug line-clamp-2">
-            KGTK Kepri Dorong Program Kepemimpinan Sekolah untuk Perkuat Mutu Pendidikan
-            </h3>
+                      {{ $item->title }}
+                    </h3>
+
+                    {{-- Kategori (opsional) --}}
+                    @if($item->category)
+                      <div class="mt-2">
+                        <span class="text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full">
+                          {{ $item->category }}
+                        </span>
+                      </div>
+                    @endif
+                  </div>
 
                 </div>
-
-                </div>
-            </a>
+              </a>
             </div>
-
-
-
-          {{-- Slide 2 --}}
-         <div class="swiper-slide">
-            <a href="#" class="block w-full max-w-[240px] mx-auto h-full">
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
-                
-                {{-- gambar fixed --}}
-                <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src="{{ asset('images/berita1.png') }}"
-                        alt="Berita 1"
-                        class="w-full h-full object-cover"
-                        onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=Berita+1';">
+          @empty
+            {{-- Jika tidak ada berita --}}
+            <div class="swiper-slide">
+              <div class="w-full max-w-[240px] mx-auto h-full">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col items-center justify-center p-6">
+                  <svg class="w-16 h-16 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                  </svg>
+                  <p class="text-sm text-gray-500 text-center">Belum ada berita</p>
                 </div>
-
-                {{-- isi dibuat flex-1 supaya rapi --}}
-                <div class="p-3 flex-1">
-                    <div class="text-[11px] text-gray-500 flex items-center gap-2">
-                    <span>📅</span>
-                    <span>14 Januari 2025</span>
-                    </div>
-
-                    {{-- judul dibatasi baris --}}
-                    <h3 class="mt-1 text-xs font-extrabold text-gray-900 leading-snug line-clamp-2">
-             Kegiatan Pembinaan GTK dan Sosialisasi Program Tahun 2025
-            </h3>
-
-                </div>
-
-                </div>
-            </a>
+              </div>
             </div>
-
-          {{-- Slide 3 --}}
-          <div class="swiper-slide">
-            <a href="#" class="block w-full max-w-[240px] mx-auto h-full">
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
-                
-                {{-- gambar fixed --}}
-                <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src="{{ asset('images/berita1.png') }}"
-                        alt="Berita 1"
-                        class="w-full h-full object-cover"
-                        onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=Berita+1';">
-                </div>
-
-                {{-- isi dibuat flex-1 supaya rapi --}}
-                <div class="p-3 flex-1">
-                    <div class="text-[11px] text-gray-500 flex items-center gap-2">
-                    <span>📅</span>
-                    <span>14 Januari 2025</span>
-                    </div>
-
-                    {{-- judul dibatasi baris --}}
-                    <h3 class="mt-1 text-xs font-extrabold text-gray-900 leading-snug line-clamp-2">
-            Rapat Koordinasi dan Evaluasi Program GTK Kepulauan Riau
-            </h3>
-
-                </div>
-
-                </div>
-            </a>
-            </div>
-
-          {{-- Slide 4 --}}
-          <div class="swiper-slide">
-            <a href="#" class="block w-full max-w-[240px] mx-auto h-full">
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
-                
-                {{-- gambar fixed --}}
-                <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src="{{ asset('images/berita1.png') }}"
-                        alt="Berita 1"
-                        class="w-full h-full object-cover"
-                        onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=Berita+1';">
-                </div>
-
-                {{-- isi dibuat flex-1 supaya rapi --}}
-                <div class="p-3 flex-1">
-                    <div class="text-[11px] text-gray-500 flex items-center gap-2">
-                    <span>📅</span>
-                    <span>14 Januari 2025</span>
-                    </div>
-
-                    {{-- judul dibatasi baris --}}
-                    <h3 class="mt-1 text-xs font-extrabold text-gray-900 leading-snug line-clamp-2">
-            Workshop Peningkatan Kompetensi Guru dan Tenaga Kependidikan
-            </h3>
-
-                </div>
-
-                </div>
-            </a>
-            </div>
-
- {{-- Slide 3 --}}
-          <div class="swiper-slide">
-            <a href="#" class="block w-full max-w-[240px] mx-auto h-full">
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full flex flex-col">
-                
-                {{-- gambar fixed --}}
-                <div class="h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src="{{ asset('images/berita1.png') }}"
-                        alt="Berita 1"
-                        class="w-full h-full object-cover"
-                        onerror="this.src='https://dummyimage.com/800x500/e5e7eb/111827&text=Berita+1';">
-                </div>
-
-                {{-- isi dibuat flex-1 supaya rapi --}}
-                <div class="p-3 flex-1">
-                    <div class="text-[11px] text-gray-500 flex items-center gap-2">
-                    <span>📅</span>
-                    <span>14 Januari 2025</span>
-                    </div>
-
-                    {{-- judul dibatasi baris --}}
-                    <h3 class="mt-1 text-xs font-extrabold text-gray-900 leading-snug line-clamp-2">
-            Rapat Koordinasi dan Evaluasi Program GTK Kepulauan Riau
-            </h3>
-
-                </div>
-
-                </div>
-            </a>
-            </div>
+          @endforelse
 
         </div>
       </div>
