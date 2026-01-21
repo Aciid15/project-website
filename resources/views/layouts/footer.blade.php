@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<footer class="bg-sky-400 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Logo & Identitas -->
+        <div>
+            <div class="flex items-center gap-3 mb-4">
+                <img src="{{ asset('images/KGTK.png') }}" alt="Logo" class="h-12">
+            </div>
+        </div>
+
+        <!-- Tentang Kami -->
+        <div>
+            <h4 class="font-semibold mb-4">Tentang Kami</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:underline">Sejarah</a></li>
+                <li><a href="#" class="hover:underline">Visi & Misi</a></li>
+                <li><a href="#" class="hover:underline">Tugas & Fungsi</a></li>
+                <li><a href="#" class="hover:underline">Struktur & Organisasi</a></li>
+            </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+            <h4 class="font-semibold mb-4">Kontak Kami</h4>
+            <p class="text-sm leading-relaxed">
+                Kantor Guru dan Tenaga Kependidikan,<br>
+                Kemendikdasmen<br><br>
+                Kompleks BPMP Provinsi Kepulauan Riau, Jalan Tata Bumi KM 20, Ceruk Ijuk, Kecamatan Toapaya, Kabupaten Bintan, Kepulauan Riau 29125
+            </p>
+            <p class="mt-4 text-sm">
+                Kontak CS: +62 892 345 678
+            </p>
+        </div>
+    </div>
+
+    <!-- Sosial Media -->
+    <div class="flex justify-center gap-6 py-6">
+        <a href="https://www.instagram.com/kgtkkepri/" class="hover:opacity-80">
+            <i class="fa-brands fa-instagram" ></i>
+        </a>
+        <a href="https://www.facebook.com/kgtkkepri/" class="hover:opacity-80">
+            <i class="fa-brands fa-facebook" ></i>
+        </a>
+        <a href="https://www.youtube.com/@kgtkkepri" class="hover:opacity-80">
+            <i class="fa-brands fa-youtube" ></i>
+        </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/30 py-4 text-center text-sm">
+        Copyright © 2025 Kantor Guru dan Tenaga Kependidikan Kepulauan Riau
+    </div>
+</footer>

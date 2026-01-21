@@ -41,6 +41,10 @@
       @yield('content')
     </main>
 
+    
+    {{-- Footer --}}
+    @include('layouts.footer')
+
   </div>
 
   {{-- Tailwind Plus Elements (kalau kamu memang pakai el-dropdown / el-disclosure) --}}
