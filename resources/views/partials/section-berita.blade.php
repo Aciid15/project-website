@@ -1,6 +1,6 @@
-{{-- resources/views/partials/section-berita.blade.php --}}
+
 <section class="bg-sky-100 js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5 lg:py-2">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5 lg:py-8">
 
     {{-- Header --}}
     <div class="flex items-center justify-between gap-3">

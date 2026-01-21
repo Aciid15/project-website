@@ -1,5 +1,6 @@
 <section class="bg-sky-500 js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-8 lg:pt-20 lg:pb-10">
+
 
     {{-- Atas: teks kiri + foto kanan --}}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">

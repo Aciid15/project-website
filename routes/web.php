@@ -35,6 +35,12 @@ Route::view('/visimisi', 'visimisi')->name('visimisi');
 // Struktur Organisasi
 Route::view('/struktur', 'struktur')->name('struktur');
 
+
+
+//PELAYANAN
+Route::view('/pelayanan1', 'pelayanan1')->name('pelayanan1');
+
+
 // ============================================
 // GUEST ROUTES (Belum login)
 // ============================================
