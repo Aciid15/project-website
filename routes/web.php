@@ -26,6 +26,15 @@ Route::get('/', function () {
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
 Route::get('/berita/{id}', [NewsController::class, 'show'])->name('news.show');
 
+
+//MENU PROFIL
+// Sejarah
+Route::view('/sejarah', 'sejarah')->name('sejarah');
+// Visi & Misi
+Route::view('/visimisi', 'visimisi')->name('visimisi');
+// Struktur Organisasi
+Route::view('/struktur', 'struktur')->name('struktur');
+
 // ============================================
 // GUEST ROUTES (Belum login)
 // ============================================

@@ -1,4 +1,4 @@
-<nav class="bg-white-800">
+<nav class="sticky top-0 z-50 bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
 
@@ -45,11 +45,10 @@
             x-transition:leave-end="transform opacity-0 translate-y-1"
             class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
           
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Sejarah</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Visi & Misi</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Struktur Organisasi</a>
+          <a href="{{ url('/sejarah') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Sejarah</a>
+          <a href="{{ url('/visimisi') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Visi & Misi</a>
+          <a href="{{ url('/struktur') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Struktur Organisasi</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Tugas & Fungsi</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Profil Pimpinan</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Bidang & UPT</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Kontak</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Lokasi</a>
@@ -280,11 +279,10 @@
               Profile
             </button>
             <div x-show="open" x-transition class="ml-4 mt-1 space-y-1">
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Sejarah</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Visi & Misi</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Struktur Organisasi</a>
+              <a href="{{ url('/sejarah') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Sejarah</a>
+              <a href="{{ url('/visimisi') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Visi & Misi</a>
+              <a href="{{ url('/struktur') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Struktur Organisasi</a>
               <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Tugas & Fungsi</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Profil Pimpinan</a>
               <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Bidang & UPT</a>
               <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Kontak</a>
               <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Lokasi</a>
