@@ -4,7 +4,7 @@
     {{-- Header --}}
     <div class="flex items-center gap-6">
       <h2 class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 text-4xl font-extrabold text-gray-900">Statistik Live</h2>
-      <span class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 h-1 w-36 bg-amber-400 rounded-full mt-4"></span>
+      <span class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 h-1 w-20 bg-amber-400 rounded-full mt-4"></span>
     </div>
 
     {{-- Kartu angka --}}
