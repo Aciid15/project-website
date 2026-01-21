@@ -27,7 +27,7 @@
       </div>
 
       {{-- Card 2 --}}
-      <div class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 rounded-2xl bg-emerald-500 text-white p-6 shadow-md ring-2 ring-sky-600/40">
+      <div class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 rounded-2xl bg-emerald-500 text-white p-6 shadow-md">
         <div class="flex items-start justify-between">
           <div>
             <p class="text-sm font-semibold opacity-90">Guru Tersertifikasi</p>
