@@ -22,7 +22,6 @@
           $words = str_word_count(strip_tags($banner->description ?? ''));
           $minutes = max(1, (int) ceil($words / 200));
         @endphp
-        <span>{{ $minutes }} menit baca</span>
       </div>
     </div>
 
