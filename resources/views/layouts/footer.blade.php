@@ -1,7 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<footer class="bg-sky-400 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-8">
+<footer class="bg-sky-500 text-white">
+    <!-- Garis pembatas -->
+    <div class="border-t border-white/30 py-4 text-center text-sm"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 pt-10 pb-5 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Logo & Identitas -->
         <div>
@@ -37,14 +40,14 @@
 
     <!-- Sosial Media -->
     <div class="flex justify-center gap-6 py-2">
-        <a href="https://www.instagram.com/kgtkkepri/" class="hover:opacity-80">
-            <i class="fa-brands fa-instagram" ></i>
+        <a href="https://www.instagram.com/kgtkkepri/" class="hover:opacity-80 transition-opacity">
+            <i class="fa-brands fa-instagram text-xl"></i>
         </a>
-        <a href="https://www.facebook.com/kgtkkepri/" class="hover:opacity-80">
-            <i class="fa-brands fa-facebook" ></i>
+        <a href="https://www.facebook.com/kgtkkepri/" class="hover:opacity-80 transition-opacity">
+            <i class="fa-brands fa-facebook text-xl"></i>
         </a>
-        <a href="https://www.youtube.com/@kgtkkepri" class="hover:opacity-80">
-            <i class="fa-brands fa-youtube" ></i>
+        <a href="https://www.youtube.com/@kgtkkepri" class="hover:opacity-80 transition-opacity">
+            <i class="fa-brands fa-youtube text-xl"></i>
         </a>
     </div>
 

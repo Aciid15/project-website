@@ -12,14 +12,14 @@ use App\Http\Controllers\NewsController;
 // PUBLIC ROUTES (Tidak perlu login)
 // ============================================
 
-// Route home - Tambahkan $news
+// Route home - Ganti $news menjadi $latest_news
 Route::get('/', function () {
     $banners = Banner::active()->ordered()->get();  
-    $news = News::where('status', 'published')
+    $latest_news = News::where('status', 'published')
                 ->latest()
                 ->take(6)
                 ->get();
-    return view('home', compact('banners', 'news'));
+    return view('home', compact('banners', 'latest_news'));
 })->name('home');
 
 // Route untuk frontend berita (PUBLIK - pindahkan ke sini)

@@ -1,4 +1,3 @@
-
 <section class="bg-sky-100 js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5 lg:py-8">
 
@@ -21,7 +20,7 @@
       <div class="swiper beritaSwiper">
         <div class="swiper-wrapper">
 
-          @forelse($news as $item)
+          @forelse($latest_news as $item)
             {{-- Slide Berita --}}
             <div class="swiper-slide">
               <a href="{{ route('news.show', $item->id) }}" class="block w-full max-w-[240px] mx-auto h-full">
@@ -57,7 +56,7 @@
                     @if($item->category)
                       <div class="mt-2">
                         <span class="text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full">
-                          {{ $item->category }}
+                          {{ is_object($item->category) ? $item->category->name : $item->category }}
                         </span>
                       </div>
                     @endif

@@ -38,7 +38,7 @@
     {{-- Bawah: 4 tombol --}}
     <div class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {{-- Button 1 --}}
-      <a href="#"
+      <a href="/sejarah"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
           hover:shadow-lg hover:scale-[1.02]
@@ -55,7 +55,7 @@
       </a>
 
       {{-- Button 2 --}}
-      <a href="#"
+      <a href="/visimisi"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
           hover:shadow-lg hover:scale-[1.02]
@@ -91,7 +91,7 @@
       </a>
 
       {{-- Button 4 --}}
-      <a href="#"
+      <a href="/struktur"
          class="group bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-4
           transition-all duration-200 ease-out
           hover:shadow-lg hover:scale-[1.02]
