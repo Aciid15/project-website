@@ -20,17 +20,20 @@
 
     </div>
 
-    {{-- Hero Image --}}
-    @if($news->image)
-      <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-lg mb-7">
-        <img
-          src="{{ asset('storage/'.$news->image) }}"
-          class="w-full h-auto block"
-          alt="{{ $news->title }}"
-          loading="lazy"
-        >
-      </div>
-    @endif
+{{-- Hero Image --}}
+@if($news->image)
+  <div class="mb-7 flex justify-center">
+    <div class="w-full max-w-[720px] rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
+      <img
+        src="{{ asset('storage/'.$news->image) }}"
+        class="w-full h-[220px] sm:h-[280px] md:h-[340px] object-cover block"
+        alt="{{ $news->title }}"
+        loading="lazy"
+      >
+    </div>
+  </div>
+@endif
+
 
     {{-- Isi --}}
     <article class="prose max-w-none prose-p:leading-8">

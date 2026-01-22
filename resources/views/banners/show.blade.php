@@ -16,22 +16,19 @@
 
       <span class="opacity-60">•</span>
 
-      <div class="flex items-center gap-2">
-        <i class="fa-regular fa-clock"></i>
-        @php
-          $words = str_word_count(strip_tags($banner->description ?? ''));
-          $minutes = max(1, (int) ceil($words / 200));
-        @endphp
-      </div>
+      
     </div>
 
-    @if($banner->image)
-      <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-lg mb-7">
-        <img src="{{ asset('storage/'.$banner->image) }}"
-             class="w-full h-auto block"
-             alt="{{ $banner->title }}">
-      </div>
-    @endif
+@if($banner->image)
+  <div class="mb-7 flex justify-center">
+    <div class="w-full max-w-[720px] rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
+      <img src="{{ asset('storage/'.$banner->image) }}"
+           class="w-full h-[220px] sm:h-[280px] md:h-[340px] object-cover block"
+           alt="{{ $banner->title }}">
+    </div>
+  </div>
+@endif
+
 
     <article class="max-w-none text-gray-800 leading-8 text-[18px] space-y-4">
       {!! nl2br(e($banner->description)) !!}
