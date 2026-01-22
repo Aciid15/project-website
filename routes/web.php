@@ -4,27 +4,34 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Banner;
 use App\Models\News;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\NewsController;
+
+
 
 // ============================================
 // PUBLIC ROUTES (Tidak perlu login)
 // ============================================
 
-// Route home - Ganti $news menjadi $latest_news
+// Route home - Tambahkan $news
 Route::get('/', function () {
     $banners = Banner::active()->ordered()->get();  
-    $latest_news = News::where('status', 'published')
+    $news = News::where('status', 'published')
                 ->latest()
                 ->take(6)
                 ->get();
-    return view('home', compact('banners', 'latest_news'));
+    return view('home', compact('banners', 'news'));
 })->name('home');
 
 // Route untuk frontend berita (PUBLIK - pindahkan ke sini)
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
 Route::get('/berita/{id}', [NewsController::class, 'show'])->name('news.show');
+
+//banner
+Route::get('/banner/{id}', [BannerController::class, 'show'])->name('banner.show');
+
+
 
 
 //MENU PROFIL

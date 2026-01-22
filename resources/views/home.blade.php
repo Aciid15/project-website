@@ -2,13 +2,13 @@
 
 @section('title', 'Beranda - GTK')
 
-  @section('content')
-  @include('partials.hero-slider')
+@section('content')
+  @include('partials.hero-slider', ['banners' => $banners])
   @include('partials.section-layanan')
   @include('partials.section-berita')
-  {{-- @include('partials.section-statistik') --}}
   @include('partials.section-pimpinan')
 @endsection
+
 
 @push('scripts')
 <script>

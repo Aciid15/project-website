@@ -4,23 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\Banner;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        // Ambil berita terbaru yang published, batasi 6 item
-        $news = News::where('status', 'published')
-                    ->latest()
-                    ->take(6)
-                    ->get();
-        
-        // Ambil banner aktif jika ada
-        $banners = Banner::where('is_active', true)
-                        ->orderBy('order')
-                        ->get();
-        
-        return view('home', compact('news', 'banners'));
-    }
+   public function index()
+{
+    $news = News::published()
+        ->latest()
+        ->take(6)
+        ->get();
+
+    $banners = News::published()
+        ->latest()
+        ->take(5)
+        ->get()
+        ->map(function ($n) {
+            return (object) [
+                'title'       => $n->title,
+                'description' => $n->excerpt ?? '',
+                'image'       => $n->image,
+                'link'        => route('news.show', $n->id),
+            ];
+        });
+
+    $staticBanners = Banner::where('is_active', true)
+        ->orderBy('order')
+        ->get();
+
+    return view('home', compact('news', 'banners', 'staticBanners'));
 }

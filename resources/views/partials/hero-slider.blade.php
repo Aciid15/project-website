@@ -1,47 +1,50 @@
 {{-- resources/views/partials/hero-slider.blade.php --}}
 <div class="heroSwiper swiper relative">
-    <div class="swiper-wrapper">
-        @foreach($banners as $banner)
-        <div class="swiper-slide relative h-[450px] md:h-[600px] lg:h-[650px]">
-            <!-- Link wrapper untuk gambar -->
-            <a href="{{ $banner->link ?? '#' }}" 
-               class="block w-full h-full"
-               @if($banner->link && (str_starts_with($banner->link, 'http://') || str_starts_with($banner->link, 'https://')))
-                   target="_blank" 
-                   rel="noopener noreferrer"
-               @endif>
-                <img src="{{ asset('storage/' . $banner->image) }}" 
-                     alt="{{ $banner->title }}"
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-            </a>
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-            
-            <div class="absolute bottom-0 left-0 right-0 p-8 text-white pointer-events-none">
-                <!-- Link untuk judul -->
-                <a href="{{ $banner->link ?? '#' }}" 
-                   class="pointer-events-auto inline-block group"
-                   @if($banner->link && (str_starts_with($banner->link, 'http://') || str_starts_with($banner->link, 'https://')))
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                   @endif>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 group-hover:text-amber-300 transition-colors duration-300">
-                        {{ $banner->title }}
-                    </h2>
-                </a>
-                <p class="text-lg md:text-xl mb-6">{{ $banner->description }}</p>
-            </div>
+  <div class="swiper-wrapper">
+    @foreach($banners as $banner)
+      @php
+        $href = $banner->link ?: route('banner.show', $banner->id);
+        $isExternal = $banner->link && (str_starts_with($banner->link, 'http://') || str_starts_with($banner->link, 'https://'));
+      @endphp
+
+    <div class="swiper-slide relative h-[320px] sm:h-[420px] md:h-[520px] lg:h-[560px]">
+
+
+
+        <!-- Link wrapper untuk gambar -->
+        <a href="{{ $href }}"
+           class="block w-full h-full"
+           @if($isExternal) target="_blank" rel="noopener noreferrer" @endif>
+          <img src="{{ asset('storage/' . $banner->image) }}"
+               alt="{{ $banner->title }}"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        </a>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+
+        <div class="absolute bottom-0 left-0 right-0 p-8 text-white pointer-events-none">
+          <!-- Link untuk judul -->
+          <a href="{{ $href }}"
+             class="pointer-events-auto inline-block group"
+             @if($isExternal) target="_blank" rel="noopener noreferrer" @endif>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 group-hover:text-amber-300 transition-colors duration-300">
+              {{ $banner->title }}
+            </h2>
+          </a>
+          <p class="text-lg md:text-xl mb-6">{{ $banner->description }}</p>
         </div>
-        @endforeach
-    </div>
-    
-    <!-- Navigation -->
-    <div class="swiper-button-prev !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !left-4"></div>
-    <div class="swiper-button-next !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !right-4"></div>
-    
-    <!-- Pagination -->
-    <div class="swiper-pagination !bottom-6"></div>
+      </div>
+    @endforeach
+  </div>
+
+  <!-- Navigation -->
+  <div class="swiper-button-prev !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !left-4"></div>
+  <div class="swiper-button-next !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !right-4"></div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination !bottom-6"></div>
 </div>
+
 
 <style>
 /* Custom Pagination Styling */

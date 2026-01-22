@@ -15,3 +15,121 @@
 .grayscale {
     filter: grayscale(100%) ;
 }
+
+
+/* === News Detail Layout (mirip contoh) === */
+.news-detail{
+  padding: 48px 16px;
+}
+
+.news-container{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.news-title{
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+.news-meta{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: #6b7280; /* abu */
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.meta-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-sep{
+  opacity: .6;
+}
+
+.news-hero{
+  margin: 0 0 28px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f3f4f6;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.news-hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Konten artikel */
+.news-article{
+  font-size: 18px;
+  line-height: 1.8;
+  color: #111827;
+}
+
+.news-article p{
+  margin: 0 0 16px;
+}
+
+.news-article h2{
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 28px 0 12px;
+}
+
+.news-article h3{
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 22px 0 10px;
+}
+
+.news-article img{
+  max-width: 100%;
+  border-radius: 14px;
+  display: block;
+  margin: 18px auto;
+}
+
+.news-article blockquote{
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-left: 4px solid #d1d5db;
+  background: #f9fafb;
+  border-radius: 10px;
+  color: #374151;
+}
+
+.news-article a{
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.news-footer{
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.back-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover{
+  text-decoration: underline;
+}
+
