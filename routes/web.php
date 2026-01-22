@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Admin\BannerController as AdminBannerController;
 
 
 
@@ -30,6 +31,16 @@ Route::get('/berita/{id}', [NewsController::class, 'show'])->name('news.show');
 
 //banner
 Route::get('/banner/{id}', [BannerController::class, 'show'])->name('banner.show');
+
+Route::prefix('admin')->name('admin.')->middleware(['admin'])->group(function () {
+    Route::get('/banners', [AdminBannerController::class, 'index'])->name('banners.index');
+    Route::get('/banners/create', [AdminBannerController::class, 'create'])->name('banners.create');
+    Route::post('/banners', [AdminBannerController::class, 'store'])->name('banners.store');
+    Route::get('/banners/{banner}/edit', [AdminBannerController::class, 'edit'])->name('banners.edit');
+    Route::put('/banners/{banner}', [AdminBannerController::class, 'update'])->name('banners.update');
+    Route::delete('/banners/{banner}', [AdminBannerController::class, 'destroy'])->name('banners.destroy');
+    Route::patch('/banners/{banner}/toggle', [AdminBannerController::class, 'toggle'])->name('banners.toggle');
+});
 
 
 
@@ -74,10 +85,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Admin Panel Routes
     Route::prefix('admin')->name('admin.')->group(function () {
         
-        // Banner Management
-        Route::resource('banners', BannerController::class);
-        Route::post('banners/{banner}/toggle', [BannerController::class, 'toggleStatus'])
-            ->name('banners.toggle');
+Route::resource('banners', AdminBannerController::class);
+Route::patch('banners/{banner}/toggle', [AdminBannerController::class, 'toggle'])
+    ->name('banners.toggle');
+
         
         // News Management
         Route::resource('news', AdminNewsController::class);
