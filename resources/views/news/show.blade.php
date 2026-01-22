@@ -15,9 +15,6 @@
         <i class="fa-regular fa-calendar"></i>
         <span>{{ optional($news->published_at)->translatedFormat('d F Y') ?? '-' }}</span>
       </div>
-
-      <span class="opacity-60">•</span>
-
     </div>
 
 {{-- Hero Image --}}

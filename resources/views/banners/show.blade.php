@@ -12,11 +12,7 @@
       <div class="flex items-center gap-2">
         <i class="fa-regular fa-calendar"></i>
         <span>{{ optional($banner->created_at)->translatedFormat('d F Y') ?? '-' }}</span>
-      </div>
-
-      <span class="opacity-60">•</span>
-
-      
+      </div>      
     </div>
 
 @if($banner->image)
