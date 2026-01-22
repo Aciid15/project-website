@@ -38,8 +38,15 @@
   </div>
 
   <!-- Navigation -->
-  <div class="swiper-button-prev !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !left-4"></div>
-  <div class="swiper-button-next !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 after:!text-gray-700 after:!text-xl !right-4"></div>
+<button type="button"
+  class="swiper-button-prev !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 !left-4 flex items-center justify-center">
+  <i class="fa-solid fa-chevron-left text-gray-700 text-xl"></i>
+</button>
+
+<button type="button"
+  class="swiper-button-next !w-12 !h-12 !bg-white/90 backdrop-blur-sm !rounded-full shadow-lg hover:!bg-white transition-all duration-300 !right-4 flex items-center justify-center">
+  <i class="fa-solid fa-chevron-right text-gray-700 text-xl"></i>
+</button>
 
   <!-- Pagination -->
   <div class="swiper-pagination !bottom-6"></div>
@@ -47,6 +54,28 @@
 
 
 <style>
+
+/* Matikan ikon default Swiper (biar yang tampil icon FA kamu) */
+.heroSwiper .swiper-button-prev::after,
+.heroSwiper .swiper-button-next::after {
+  display: none !important;
+}
+
+/* Paksa tombol panah tampil & berada di tengah vertikal */
+.heroSwiper .swiper-button-prev,
+.heroSwiper .swiper-button-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 50 !important;
+}
+
+/* Biar nggak kepotong kalau ada overflow */
+.heroSwiper {
+  overflow: hidden;
+}
+
+
 /* Custom Pagination Styling */
 .swiper-pagination-bullet {
     width: 14px !important;

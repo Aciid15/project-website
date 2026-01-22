@@ -18,13 +18,6 @@
 
       <span class="opacity-60">•</span>
 
-      <div class="flex items-center gap-2">
-        <i class="fa-regular fa-clock"></i>
-        @php
-          $words = str_word_count(strip_tags($news->content ?? ''));
-          $minutes = max(1, (int) ceil($words / 200));
-        @endphp
-      </div>
     </div>
 
     {{-- Hero Image --}}
