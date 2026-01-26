@@ -33,8 +33,11 @@
 
 
     {{-- Isi --}}
-    <article class="prose max-w-none prose-p:leading-8">
-      {!! $news->content !!}
+    <article class="prose max-w-none prose-p:leading-8 break-words [overflow-wrap:anywhere]
+               prose-img:max-w-full prose-img:h-auto
+               prose-iframe:max-w-full
+               prose-table:block prose-table:overflow-x-auto">
+  {!! $news->content !!}
     </article>
 
     {{-- Back --}}

@@ -9,13 +9,11 @@ use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Admin\BannerController as AdminBannerController;
 
-
-
 // ============================================
 // PUBLIC ROUTES (Tidak perlu login)
 // ============================================
 
-// Route home - Tambahkan $news
+// Route home
 Route::get('/', function () {
     $banners = Banner::active()->ordered()->get();  
     $news = News::where('status', 'published')
@@ -25,39 +23,20 @@ Route::get('/', function () {
     return view('home', compact('banners', 'news'));
 })->name('home');
 
-// Route untuk frontend berita (PUBLIK - pindahkan ke sini)
+// Route untuk frontend berita (PUBLIK)
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
 Route::get('/berita/{id}', [NewsController::class, 'show'])->name('news.show');
 
-//banner
+// Route untuk frontend banner
 Route::get('/banner/{id}', [BannerController::class, 'show'])->name('banner.show');
 
-Route::prefix('admin')->name('admin.')->middleware(['admin'])->group(function () {
-    Route::get('/banners', [AdminBannerController::class, 'index'])->name('banners.index');
-    Route::get('/banners/create', [AdminBannerController::class, 'create'])->name('banners.create');
-    Route::post('/banners', [AdminBannerController::class, 'store'])->name('banners.store');
-    Route::get('/banners/{banner}/edit', [AdminBannerController::class, 'edit'])->name('banners.edit');
-    Route::put('/banners/{banner}', [AdminBannerController::class, 'update'])->name('banners.update');
-    Route::delete('/banners/{banner}', [AdminBannerController::class, 'destroy'])->name('banners.destroy');
-    Route::patch('/banners/{banner}/toggle', [AdminBannerController::class, 'toggle'])->name('banners.toggle');
-});
-
-
-
-
-//MENU PROFIL
-// Sejarah
+// MENU PROFIL
 Route::view('/sejarah', 'sejarah')->name('sejarah');
-// Visi & Misi
 Route::view('/visimisi', 'visimisi')->name('visimisi');
-// Struktur Organisasi
 Route::view('/struktur', 'struktur')->name('struktur');
 
-
-
-//PELAYANAN
+// PELAYANAN
 Route::view('/pelayanan1', 'pelayanan1')->name('pelayanan1');
-
 
 // ============================================
 // GUEST ROUTES (Belum login)
@@ -85,13 +64,15 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Admin Panel Routes
     Route::prefix('admin')->name('admin.')->group(function () {
         
-Route::resource('banners', AdminBannerController::class);
-Route::patch('banners/{banner}/toggle', [AdminBannerController::class, 'toggle'])
-    ->name('banners.toggle');
+        // Banner Management
+        Route::resource('banners', AdminBannerController::class);
+        Route::patch('banners/{banner}/toggle', [AdminBannerController::class, 'toggle'])
+            ->name('banners.toggle');
 
-        
         // News Management
         Route::resource('news', AdminNewsController::class);
+        Route::patch('news/{news}/toggle', [AdminNewsController::class, 'toggle'])
+            ->name('news.toggle');
     });
 
     // Test route

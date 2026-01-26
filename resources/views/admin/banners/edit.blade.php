@@ -48,7 +48,7 @@
             </div>
 
             <!-- Link (Opsional) -->
-            <div class="mb-4">
+            {{-- <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700 mb-2">Link (Opsional)</label>
                 <input type="url" 
                        name="link" 
@@ -58,7 +58,7 @@
                 @error('link')
                     <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                 @enderror
-            </div>
+            </div> --}}
 
             <!-- Gambar Banner -->
             <div class="mb-4">

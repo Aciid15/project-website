@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\News;
 use App\Models\Category;
+use App\Models\News;
+use App\Models\NewsCategory; // Ganti dari Category ke NewsCategory
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -28,7 +29,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::all(); // Ganti dari Category
         return view('admin.news.create', compact('categories'));
     }
 
@@ -93,7 +94,7 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        $categories = Category::all();
+        $categories = Category::all(); // Ganti dari Category
         return view('admin.news.edit', compact('news', 'categories'));
     }
 
@@ -173,6 +174,32 @@ class NewsController extends Controller
 
         return redirect()->route('admin.news.index')
                         ->with('success', 'Berita berhasil dihapus!');
+    }
+
+    /**
+     * Toggle news status between published and draft.
+     * TAMBAHKAN METHOD INI DI SINI
+     */
+    public function toggle(News $news)
+    {
+        // Toggle antara 'published' dan 'draft'
+        $news->status = $news->status === 'published' ? 'draft' : 'published';
+        
+        // Jika berubah ke published, set published_at jika belum ada
+        if ($news->status === 'published' && !$news->published_at) {
+            $news->published_at = now();
+        }
+        
+        $news->save();
+
+        // Log activity
+        if (class_exists('\App\Helpers\ActivityLogger')) {
+            $statusText = $news->status === 'published' ? 'dipublikasikan' : 'disimpan sebagai draft';
+            \App\Helpers\ActivityLogger::updated('berita', $news->title . ' ' . $statusText);
+        }
+
+        return redirect()->route('admin.news.index')
+                        ->with('success', 'Status berita berhasil diubah!');
     }
 
     /**

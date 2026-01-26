@@ -10,7 +10,7 @@
         <div class="bg-white rounded-lg shadow-md p-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm text-gray-600 mb-1">Total Berita</p>
+                    <p class="text-sm text-gray-600 mb-1">Total Berita</p> 
                     <p class="text-3xl font-bold text-gray-800">245</p>
                 </div>
                 <div class="bg-blue-100 rounded-full p-3">

@@ -3,9 +3,18 @@
 @section('page-title', 'Manajemen Berita')
 
 @section('content')
+
+
 <div class="p-6">
+    <nav class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+    <a href="{{ route('dashboard') }}" class="hover:text-blue-600">Dashboard</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+    <span class="text-gray-800 font-medium">Berita</span>
+</nav>
     <div class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold text-gray-800">Manajemen Berita</h1>
+        <h1></h1>
         <a href="{{ route('admin.news.create') }}" 
            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,18 +61,17 @@
                         @endif
                     </td>
                     <td class="px-6 py-4 text-sm">{{ Str::limit($item->title, 50) }}</td>
-                    <td class="px-6 py-4 text-sm text-gray-500">{{ $item->category ?? '-' }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-500">{{ $item->category->name ?? '-' }}</td>
                     <td class="px-6 py-4 text-sm text-gray-500">{{ $item->created_at->format('d/m/Y') }}</td>
                     <td class="px-6 py-4">
-                        @if($item->status == 'published')
-                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">
-                            Published
-                        </span>
-                        @else
-                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">
-                            Draft
-                        </span>
-                        @endif
+                    <form action="{{ route('admin.news.toggle', $item) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" 
+                                class="px-2 py-1 text-xs rounded-full {{ $item->status == 'published' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                            {{ $item->status == 'published' ? 'Published' : 'Draft' }}
+                        </button>
+                    </form>
                     </td>
                     <td class="px-6 py-4 text-sm">
                         <div class="flex gap-2">

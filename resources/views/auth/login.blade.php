@@ -112,7 +112,7 @@
             <!-- Footer -->
             <div class="mt-8 text-center">
                 <p class="text-sm text-gray-600">
-                    © 2024 Kementerian Pendidikan Dasar dan Menengah
+                    © 2026 Kementerian Pendidikan Dasar dan Menengah
                 </p>
             </div>
         </div>

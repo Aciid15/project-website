@@ -53,6 +53,6 @@
 
     <!-- Copyright -->
     <div class="border-t border-white/30 py-4 text-center text-sm">
-        Copyright © 2025 Kantor Guru dan Tenaga Kependidikan Kepulauan Riau
+        Copyright © 2026 Kantor Guru dan Tenaga Kependidikan Kepulauan Riau
     </div>
 </footer>

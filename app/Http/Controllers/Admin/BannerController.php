@@ -86,12 +86,17 @@ class BannerController extends Controller
 
     public function destroy(Banner $banner)
         {
+            $deletedOrder = (int) $banner->order;
             // Hapus gambar dari storage
             if ($banner->image && Storage::disk('public')->exists($banner->image)) {
                 Storage::disk('public')->delete($banner->image);
             }
 
             $banner->delete();
+
+            // Perbarui order banner yang berada dibawahnya
+            Banner::where('order', '>', $deletedOrder)
+            ->decrement('order');
 
             return redirect()
                 ->route('admin.banners.index')
@@ -100,12 +105,10 @@ class BannerController extends Controller
 
 public function toggle(Banner $banner)
 {
-    $banner->update([
-        'is_active' => !$banner->is_active
-    ]);
+    $banner->is_active = !$banner->is_active;
+    $banner->save();
 
-    return redirect()
-        ->route('admin.banners.index')
+    return redirect()->route('admin.banners.index')
         ->with('success', 'Status banner berhasil diubah!');
 }
 
