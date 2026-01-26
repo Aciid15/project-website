@@ -8,8 +8,20 @@
 
         <!-- Logo & Identitas -->
         <div>
-            <div class="flex items-center gap-3 mb-4">
-                <img src="{{ asset('images/KGTK.png') }}" alt="Logo" class="h-12">
+            <h4 class="font-semibold mb-4">Mitra Kami</h4>
+            <div class="flex flex-wrap gap-4 items-center">
+                <!-- Logo 1 -->
+                <div class="flex items-center justify-center">
+                    <img src="{{ asset('images/KGTK.png') }}" alt="Logo KGTK" class="h-12 object-contain">
+                </div>
+                <!-- Logo 2 -->
+                <div class="flex items-center justify-center">
+                    <img src="{{ asset('images/pbus.png') }}" alt="Logo 2" class="h-12 object-contain">
+                </div>
+                <!-- Logo 3 -->
+                <div class="flex items-center justify-center">
+                    <img src="{{ asset('images/ramah.png') }}" alt="Logo 3" class="h-12 object-contain">
+                </div>
             </div>
         </div>
 

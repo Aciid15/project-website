@@ -11,11 +11,11 @@
   {{-- Alpine --}}
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+  {{-- Font Awesome 6 --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   {{-- Swiper CSS --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
   {{-- x-cloak biar dropdown tidak kedip --}}
   <style>
@@ -27,19 +27,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     -webkit-box-orient:vertical;
     overflow:hidden;
   }
-.high-contrast {
-  background-color: #000 !important;
-  color: #fff !important;
-}
 
-.high-contrast a {
-  color: #ffd700 !important;
-}
+  .high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
 
-.grayscale {
-  filter: grayscale(100%);
-}
+  .high-contrast a {
+    color: #ffd700 !important;
+  }
 
+  .grayscale {
+    filter: grayscale(100%);
+  }
   </style>
 
   @stack('styles')
@@ -57,7 +57,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       @yield('content')
     </main>
 
-    
     {{-- Footer --}}
     @include('layouts.footer')
 
@@ -65,11 +64,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     @include('partials.accessibility-widget')
     <script src="{{ asset('js/accessibility.js') }}"></script>
 
-    
-
-
   </div>
-
 
   {{-- Tailwind Plus Elements (kalau kamu memang pakai el-dropdown / el-disclosure) --}}
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
