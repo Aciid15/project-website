@@ -65,14 +65,29 @@
                     Kelola Banner
                 </a>
 
-                <!-- News Management -->
-                <a href="{{ route('admin.news.index') }}" 
-                class="flex items-center px-4 py-3 text-gray-300 rounded-lg hover:bg-blue-800 hover:text-white transition duration-200 {{ request()->routeIs('admin.news.*') ? 'bg-blue-800 text-white' : '' }}">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
-                    </svg>
-                    Kelola Berita
-                </a>
+                
+                <!-- Karyawan Management -->
+<a href="{{ route('admin.employees.index') }}"
+   class="flex items-center gap-3 px-4 py-3 rounded-lg transition duration-200
+   {{ request()->routeIs('admin.employees.*')
+      ? 'bg-blue-800 text-white'
+      : 'text-gray-300 hover:bg-blue-800 hover:text-white' }}">
+
+  <!-- ICON -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="w-5 h-5 flex-shrink-0"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke="currentColor"
+       stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17 20h5v-2a4 4 0 00-5-4M9 20H4v-2a4 4 0 015-4m4-4a4 4 0 11-8 0 4 4 0 018 0zm6 4a3 3 0 10-6 0 3 3 0 006 0z" />
+  </svg>
+
+  <span>Karyawan</span>
+</a>
+
+
                 
                 <!-- Layanan  -->
                 {{-- <a href="{{ route('admin.news.index') }}" 
