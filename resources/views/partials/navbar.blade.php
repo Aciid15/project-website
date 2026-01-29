@@ -49,9 +49,7 @@
           <a href="{{ url('/visimisi') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Visi & Misi</a>
           <a href="{{ url('/struktur') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Struktur Organisasi</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Tugas & Fungsi</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Bidang & UPT</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Kontak</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Lokasi</a>
+          <a href="{{ url('/lokasi') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Lokasi</a>
         </div>
       </div>
 
@@ -82,7 +80,7 @@
             x-transition:leave-start="transform opacity-100 translate-y-0"
             x-transition:leave-end="transform opacity-0 translate-y-1"
              class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Berita</a>
+          <a href="{{ url('/berita') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Berita</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Artikel</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Galeri Foto</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Galeri Video</a>
@@ -113,13 +111,12 @@
             x-transition:leave-start="transform opacity-100 translate-y-0"
             x-transition:leave-end="transform opacity-0 translate-y-1"
              class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 py-1">
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300" >Profil PPID</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Berkala</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Serta Merta</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Informasi Setiap Saat</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Permohonan Informasi</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Laporan PPID</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">SOP & Maklumat</a>
+          <a href="{{ url('/pelayanan1') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300" >Pelayanan Pengaduan</a>
+          <a href="{{ url('/pelayanan2') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Kerja Sama Antar Instansi</a>
+          <a href="{{ url('/pelayanan3') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Permohonan Informasi</a>
+          <a href="{{ url('/pelayanan4') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Permohonan Narasumber</a>
+          <a href="{{ url('/pelayanan5') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Peminjaman Sarana Prasarana</a>
+          <a href="{{ url('/pelayanan6') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Fasilitas Peningkatan Kompetensi</a>
         </div>
       </div>
 
@@ -283,9 +280,7 @@
               <a href="{{ url('/visimisi') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Visi & Misi</a>
               <a href="{{ url('/struktur') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Struktur Organisasi</a>
               <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Tugas & Fungsi</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Bidang & UPT</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Kontak</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Lokasi</a>
+              <a href="{{ url('/lokasi') }}" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Lokasi</a>
             </div>
           </div>
           
@@ -311,13 +306,12 @@
               PPID
             </button>
             <div x-show="open" x-transition class="ml-4 mt-1 space-y-1">
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Profil PPID</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Informasi Berkala</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Informasi Serta Merta</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Informasi Setiap Saat</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Permohonan Informasi</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">Laporan PPID</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">SOP & Maklumat</a>
+          <a href="{{ url('/pelayanan1') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300" >Pelayanan Pengaduan</a>
+          <a href="{{ url('/pelayanan2') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Kerja Sama Antar Instansi</a>
+          <a href="{{ url('/pelayanan3') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Permohonan Informasi</a>
+          <a href="{{ url('/pelayanan4') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Permohonan Narasumber</a>
+          <a href="{{ url('/pelayanan5') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Peminjaman Sarana Prasarana</a>
+          <a href="{{ url('/pelayanan6') }}" class="block px-4 py-2 text-sm text-gray-700 transition-transform duration-200 ease-out hover:scale-[1.02] hover:bg-sky-300">Pelayanan Fasilitas Peningkatan Kompetensi</a>
             </div>
           </div>
           

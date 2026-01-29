@@ -1,4 +1,4 @@
-<section class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 bg-gray-50">
+<section class="js-reveal opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
 
     {{-- Header --}}

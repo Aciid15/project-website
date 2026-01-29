@@ -36,13 +36,17 @@ Route::get('/banner/{id}', [BannerController::class, 'show'])->name('banner.show
 // MENU PROFIL
 Route::view('/sejarah', 'sejarah')->name('sejarah');
 Route::view('/visimisi', 'visimisi')->name('visimisi');
-
-
 Route::get('/struktur', [StrukturController::class, 'index'])->name('struktur');
+Route::view('/lokasi', 'lokasi')->name('lokasi');
 
 
 // PELAYANAN
 Route::view('/pelayanan1', 'pelayanan1')->name('pelayanan1');
+Route::view('/pelayanan2', 'pelayanan2')->name('pelayanan2');
+Route::view('/pelayanan3', 'pelayanan3')->name('pelayanan3');
+Route::view('/pelayanan4', 'pelayanan4')->name('pelayanan4');
+Route::view('/pelayanan5', 'pelayanan5')->name('pelayanan5');
+Route::view('/pelayanan6', 'pelayanan6')->name('pelayanan6');
 
 Route::get('/karyawan', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/employees', [AdminEmployeeController::class, 'index'])->name('employees.index');
